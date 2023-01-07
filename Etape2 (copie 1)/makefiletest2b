@@ -1,0 +1,12 @@
+Test2b:	Test2b.cpp Classes/Option/Option.o
+	echo "Creation de Test2b"
+	g++ Test2b.cpp Classes/Option/Option.o -I Classes/Option/ -o Test2b #-D DEBUG
+
+
+Classes/Option/Option.o:	Classes/Option/Option.cpp Classes/Option/Option.h
+	echo "Creation de Option.o"
+	g++	Classes/Option/Option.cpp -c -o Classes/Option/Option.o #-D DEBUG
+
+
+clean:
+	rm Classes/*.o
